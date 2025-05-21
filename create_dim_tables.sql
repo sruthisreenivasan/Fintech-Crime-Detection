@@ -1,0 +1,48 @@
+-- Dimension: Crime
+CREATE TABLE dimCrime (
+  CrimeID STRING,
+  CrimeType STRING,
+  Outcome STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+-- Dimension: Population
+CREATE TABLE dimPopulation (
+  PopulationID STRING,
+  Population INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+-- Dimension: Income
+CREATE TABLE dimIncome (
+  IncomeID STRING,
+  Income FLOAT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+-- Dimension: Location
+CREATE TABLE dimLocation (
+  LocationID STRING,
+  Region STRING,
+  Subregion STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+-- Dimension: Time
+CREATE TABLE dimTime (
+  TimeID STRING,
+  Year INT,
+  Month INT,
+  Quarter STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
